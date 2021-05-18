@@ -3,5 +3,89 @@ section {
   height: 100%;
   background-color: #36393f;
 }
+section .pai {
+  width: 100%;
+  height: 100%;
+}
+section .pai .header {
+  width: 100%;
+  height: 30px;
+  background-color: #36393f;
+  border-bottom: solid 3px #2f3136;
+}
+section .pai .section {
+  width: 100%;
+  height: calc(100% - 30px);
+  background-color: #36393f;
+  display: flex;
+  flex-direction: row;
+}
+section .pai .section .space {
+  width: 260px;
+  height: calc(100% - 30px);
+}
+section .pai .section .devs {
+  position: fixed;
+  left: calc(100% - 200px);
+  width: 200px;
+  height: 100%;
+  background-color: #292b2f;
+  z-index: 100;
+  padding: 20px 5px 5px 5px;
+}
+section .pai .section .devs .title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+section .pai .section .devs .title span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d6d7d9;
+}
+section .pai .section .devs .intern {
+  margin-bottom: 10px;
+}
+section .pai .section .devs .intern .user {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+section .pai .section .devs .intern .user:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+section .pai .section .devs .intern .user .userimg {
+  width: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .pai .section .devs .intern .user .userimg .img {
+  background-color: #dfdfdf;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+section .pai .section .devs .intern .user .userimg .img img {
+  width: 100%;
+  height: 100%;
+}
+section .pai .section .devs .intern .user .span {
+  user-select: none;
+  width: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+}
+section .pai .section .devs .intern .user .span span {
+  margin-left: 1px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ed424596;
+}
 
 /*# sourceMappingURL=section.css.map */

@@ -43,10 +43,23 @@ header{
                     justify-content: center;
                     align-items: center;
                     overflow: hidden;
+                    user-select: none;
                     span{
                         cursor: pointer;
                         font-size: 100%;
+                        font-weight: bold;
                         color: $corspan;
+                    }
+                    .copied{
+                        position: absolute;
+                        background-color: $corverde;
+                        display: none;
+                        border-radius: 5px;
+                        padding: 8px 10px;
+                        margin-bottom: 70px;
+                        span{
+                            color: rgb(243, 243, 243);
+                        }
                     }
                 }
             }
@@ -72,7 +85,7 @@ header{
                     align-items: center;
                     justify-content: flex-end;
                     .iconify{
-                        font-size: 18px;
+                        font-size: 28px;
                         color: $corspan;
                         cursor: pointer;
                         padding: 5px;
@@ -86,7 +99,10 @@ header{
             }
         }
     }
+    
     .nav{
+        
+        overflow-y: auto;
         margin-top: 10px;
         max-width: 100%;
         height: calc(100% - 152px);
@@ -99,6 +115,8 @@ header{
         .namedir{
             margin-left: 5px;
             user-select: none;
+            padding: 5px;
+            cursor: pointer;
             span{
                 cursor: pointer;
                 width: 100px;

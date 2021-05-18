@@ -46,11 +46,24 @@ header .header .account .img .nick {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  user-select: none;
 }
 header .header .account .img .nick span {
   cursor: pointer;
   font-size: 100%;
+  font-weight: bold;
   color: #d6d7d9;
+}
+header .header .account .img .nick .copied {
+  position: absolute;
+  background-color: #3ba55c;
+  display: none;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin-bottom: 70px;
+}
+header .header .account .img .nick .copied span {
+  color: #f3f3f3;
 }
 header .header .account .right {
   display: flex;
@@ -76,7 +89,7 @@ header .header .account .right .gear {
   justify-content: flex-end;
 }
 header .header .account .right .gear .iconify {
-  font-size: 18px;
+  font-size: 28px;
   color: #d6d7d9;
   cursor: pointer;
   padding: 5px;
@@ -86,6 +99,7 @@ header .header .account .right .gear .iconify:hover {
   border-radius: 5px;
 }
 header .nav {
+  overflow-y: auto;
   margin-top: 10px;
   max-width: 100%;
   height: calc(100% - 152px);
@@ -97,6 +111,8 @@ header .nav .pai {
 header .nav .namedir {
   margin-left: 5px;
   user-select: none;
+  padding: 5px;
+  cursor: pointer;
 }
 header .nav .namedir span {
   cursor: pointer;

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   outline: none;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -11,6 +12,16 @@ html, body {
 body {
   display: flex;
   flex-direction: row;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #2f3136;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292b2f;
+  border-radius: 3px;
 }
 
 /*# sourceMappingURL=index.css.map */
