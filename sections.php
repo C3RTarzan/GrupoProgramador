@@ -4,51 +4,19 @@
 
         </div>
         <div class="section">
-            <div class="space">
-
-            </div>
-
-            <div class="devs">
-                <div class="title">
-                    <span>Users</span>
-                </div>
-                <div class="intern">
-                    <div class="user">
-                        <div class="userimg">
-                            <div class="img">
-                                <img src="./public/img/user.png" alt="">
-                            </div>
-                        </div>
-                        <div class="span">
-                            <span>HHHHHHHHT</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="intern">
-                    <div class="user">
-                        <div class="userimg">
-                            <div class="img">
-                                <img src="./public/img/user.png" alt="">
-                            </div>
-                        </div>
-                        <div class="span">
-                            <span>HHHHHHHHT</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="intern">
-                    <div class="user">
-                        <div class="userimg">
-                            <div class="img">
-                                <img src="./public/img/user.png" alt="">
-                            </div>
-                        </div>
-                        <div class="span">
-                            <span>HHHHHHHHT</span>
-                        </div>
-                    </div>
+            <div class="home">
+                <div class="articles">
+                    <span>oiii</span>
                 </div>
             </div>
+            <div class="openedmenu">
+                <div class="span">
+                    <span class="iconify" data-icon="eva:arrow-ios-back-outline" data-inline="false"></span>
+                </div>
+            </div>
+            <?php
+                include "./devs.php"
+            ?>
         </div>   
     </div>
 </section>

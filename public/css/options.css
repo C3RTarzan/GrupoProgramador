@@ -1,0 +1,88 @@
+.secoptions {
+  width: 100%;
+  left: 0;
+  user-select: none;
+  height: 100%;
+  display: none;
+  position: absolute;
+  background-color: #36393f;
+  z-index: 101;
+}
+.secoptions .itens {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background-color: #292b2f;
+}
+.secoptions .itens .bcnav {
+  width: 100%;
+  height: min-content;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.secoptions .itens .bcnav .nav {
+  padding: 5px 0;
+  width: 80%;
+  border-bottom: solid 2px #2f3136;
+}
+.secoptions .itens .bcnav .nav .name {
+  cursor: default;
+  width: 100%;
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 0 5px 0;
+}
+.secoptions .itens .bcnav .nav .name span {
+  color: #d6d7d9;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.secoptions .itens .bcnav .nav .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+  height: 30px;
+}
+.secoptions .itens .bcnav .nav .button:hover {
+  background-color: #36393f;
+}
+.secoptions .itens .bcnav .nav .button .account span {
+  color: #d6d7d9;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.secoptions .itens .bcnav .nav .button .account .exit {
+  color: rgba(255, 29, 29, 0.755);
+}
+.secoptions .info {
+  position: relative;
+}
+.secoptions .info .ExitOptions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 50px;
+  top: 50px;
+  cursor: pointer;
+}
+.secoptions .info .ExitOptions span {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.563);
+  display: flex;
+  justify-content: center;
+}
+.secoptions .info .ExitOptions .iconify {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.563);
+}
+.secoptions .info .ExitOptions .iconify:hover {
+  color: rgba(255, 255, 255, 0.659);
+}
+
+/*# sourceMappingURL=options.css.map */

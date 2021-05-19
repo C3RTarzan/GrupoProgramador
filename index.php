@@ -10,12 +10,14 @@ include("./class/conexao.php");
     <link rel="stylesheet" href="/public/css/index.css">
     <link rel="stylesheet" href="/public/css/header.css">
     <link rel="stylesheet" href="/public/css/section.css">
+    <link rel="stylesheet" href="/public/css/options.css">
     <title>Programação WEB</title>
 </head>
 <body>
     <?php
         include "./header.php";
         include "./sections.php";
+        include "./options.php";
     ?>
 </body>
 </html>

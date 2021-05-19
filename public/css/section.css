@@ -14,22 +14,50 @@ section .pai .header {
   border-bottom: solid 3px #2f3136;
 }
 section .pai .section {
-  width: 100%;
+  position: relative;
+  width: calc(100% - 260px);
   height: calc(100% - 30px);
+  left: 260px;
   background-color: #36393f;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
-section .pai .section .space {
-  width: 260px;
-  height: calc(100% - 30px);
+section .pai .section .home {
+  width: 100%;
+  height: 100%;
+}
+section .pai .section .home .articles {
+  width: calc(100% - 200px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+section .pai .section .openedmenu {
+  right: 200px;
+  bottom: calc(50% - 25px);
+  width: 15px;
+  height: 50px;
+  position: absolute;
+  background-color: #d6d7d9;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+section .pai .section .openedmenu .span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
 }
 section .pai .section .devs {
+  overflow-y: auto;
   position: fixed;
   left: calc(100% - 200px);
   width: 200px;
   height: 100%;
-  background-color: #292b2f;
+  background-color: #2f3136;
   z-index: 100;
   padding: 20px 5px 5px 5px;
 }
@@ -40,18 +68,23 @@ section .pai .section .devs .title {
   margin-bottom: 20px;
 }
 section .pai .section .devs .title span {
+  user-select: none;
   font-size: 20px;
   font-weight: bold;
   color: #d6d7d9;
 }
 section .pai .section .devs .intern {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 section .pai .section .devs .intern .user {
+  width: 100%;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   border-radius: 5px;
+  padding-right: 5px;
 }
 section .pai .section .devs .intern .user:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -82,7 +115,6 @@ section .pai .section .devs .intern .user .span {
   align-items: center;
 }
 section .pai .section .devs .intern .user .span span {
-  margin-left: 1px;
   font-size: 18px;
   font-weight: bold;
   color: #ed424596;
