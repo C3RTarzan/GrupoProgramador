@@ -1,3 +1,4 @@
+
 <section>
     <div class="pai">
         <div class="header">
@@ -7,7 +8,7 @@
             <div class="home">
                 <div class="articles">
                 <?php
-                    
+                    include "home-home.php";
                 ?>
                 </div>
             </div>
@@ -17,8 +18,9 @@
                 </div>
             </div>
             <?php
-                include "devs.php"
+                include "../devs.php";
             ?>
         </div>   
     </div>
 </section>
+<script src="/public/js/home-home.js"></script>

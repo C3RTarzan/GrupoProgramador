@@ -2,6 +2,7 @@ header {
   position: fixed;
   height: 100%;
   width: 260px;
+  z-index: 110;
 }
 header .header {
   width: 260px;
@@ -34,6 +35,7 @@ header .header .account .img .imgbc .foto {
   border-radius: 50%;
   background-color: #d6d7d9;
   overflow: hidden;
+  user-select: none;
 }
 header .header .account .img .imgbc .foto img {
   width: 100%;
@@ -97,6 +99,36 @@ header .header .account .right .gear .iconify {
 header .header .account .right .gear .iconify:hover {
   background-color: #b9bbbe48;
   border-radius: 5px;
+}
+header .header .account-login {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  flex-direction: row;
+  background-color: #292b2f;
+  border-bottom: solid 2px #36393f;
+  padding: 0 0 10px 0;
+}
+header .header .account-login .intern-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+header .header .account-login .intern-div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #5865f2;
+}
+header .header .account-login .intern-div a span {
+  font-size: 18px;
+  color: #d6d7d9;
 }
 header .nav {
   overflow-y: auto;

@@ -1,4 +1,7 @@
+<?php
+    if(isset($_SESSION["id"])):
 
+?>
 <div class="secoptions">
     <div class="itens">
         <div class="bcnav">
@@ -23,7 +26,7 @@
                 </div>
             </div>
             <div class="nav">
-                <div class="button">
+                <div class="button exitAccount">
                     <div class="account">
                         <span class="exit">Exit</span>
                     </div>
@@ -39,3 +42,6 @@
         </div>
     </div>
 </div>
+<?php
+    endif;
+?>

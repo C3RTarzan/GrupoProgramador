@@ -4,8 +4,23 @@ window.onload = () =>{
     copied();  
     options();
     menu()
-
+    clicknav()
+    optionsexit()
     document.querySelector(".namedir").click();
+}
+function clicknav(){
+    const home = document.querySelectorAll(".home-page .pai");
+    const iconify = document.querySelectorAll(".home-page .pai .iconify")
+    for(let i = 0; i < home.length; i++){
+        home[i].addEventListener("click", () => {
+            if(home[i] == home[0]){
+                window.location.href = "/Home"
+            }
+            if(home[i] == home[1]){
+                window.location.href = "/Sobre"
+            }
+        })
+    }
 }
 
 function menu(){
@@ -14,58 +29,76 @@ function menu(){
     const articles = document.querySelector(".articles");
     const span = openedmenu.querySelector(".span");
     let cont = true;
+    
     openedmenu.addEventListener("click", () =>{  
+        if(localStorage.getItem("menu")){
+            devs.style.display
+            console.log();
+        }
         if (cont) {
             devs.style = "display: none";
             articles.style = "width: 100%";
             openedmenu.style = "right: 1px";
-            span.style = "transform: rotateZ(180deg);"
+            span.style = "transform: rotateZ(0);"
             cont = false;
         }else{
             devs.style = "display: inline";
             articles.style = "width: calc(100% - 200px);";
             openedmenu.style = "right: 200px";
-            span.style = "transform: rotateZ(0);"
+            span.style = "transform: rotateZ(180deg);"
             cont = true;
         }
+        localStorage.setItem("menu", devs.style.display);
     })
 }
 
 function options(){
     const click = document.querySelector("header .gear");
-    const display = document.querySelector(".secoptions");
-    const exit = document.querySelector(".ExitOptions");
-    click.addEventListener("click", () =>{
-
-        display.style = "display: inline";
-
-    })
-    exit.addEventListener("click", () =>{
-        display.style = "display: none";
-
-    })  
-    document.querySelector('body').addEventListener('keydown', function(event) {
+    if(click != null){
+        
+        const display = document.querySelector(".secoptions");
+        const exit = document.querySelector(".ExitOptions");
+        click.addEventListener("click", () =>{
+            display.style = "display: inline";
+        })
+        exit.addEventListener("click", () =>{
+            display.style = "display: none";
+    
+        })  
+        document.querySelector('body').addEventListener('keydown', function(event) {
         let tecla = event.keyCode;
-       if(tecla == 27){
+        if(tecla == 27){
             if(display.style.display == "none" || display.style.display == ""){
                 display.style = "display: inline";
             }else if(display.style.display == "inline"){
                 display.style = "display: none";
             }
-       }   
-    })
+        }   
+        })
+    }
+}
+function optionsexit(){
+    const exit = document.querySelector(".secoptions .exitAccount");
+    if(exit != null ){
+        exit.addEventListener("click", () =>{
+            console.log("clicou");
+            window.location.href = "/class/exit.php"
+        })
+    }
 }
 
 function copied(){
     const click = document.querySelector(".nick span");
     const copied = document.querySelector(".copied");  
-    click.addEventListener("click", () =>{
-        navigator.clipboard.writeText(click.textContent);
-        setTimeout( function() {
-            copied.style = "display: none";
-        }, 800 );
-        copied.style = "display: inline";
-    })
+    if(click != null){
+        click.addEventListener("click", () =>{
+            navigator.clipboard.writeText(click.textContent);
+            setTimeout( function() {
+                copied.style = "display: none";
+            }, 800 );
+            copied.style = "display: inline";
+        })
+    }
 }
 
 function holver(){

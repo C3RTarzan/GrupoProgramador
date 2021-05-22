@@ -3,6 +3,7 @@ header{
     position: fixed;
     height: 100%;
     width: 260px;
+    z-index: 110;
     .header{
         width: 260px;
         height: 100%;
@@ -30,6 +31,7 @@ header{
                         border-radius: 50%;
                         background-color: $corspan;
                         overflow: hidden;
+                        user-select: none;
                         img{
                             width: 100%;
                             height: 100%;
@@ -97,6 +99,37 @@ header{
                     }
                 }
             }
+        }
+        .account-login{
+            width: 100%;
+            height: 140px;
+            display: flex;
+            flex-direction: row;
+            background-color: $cor2;
+            border-bottom: solid 2px $cor;
+            padding: 0 0 10px 0;
+            .intern-div{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                padding-bottom: 10px;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: min-content;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    background-color: $corbutton;
+                    span{
+                        font-size: 18px;
+                        color: $corspan;
+                    }
+                }
+            }
+            
         }
     }
     

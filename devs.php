@@ -3,14 +3,19 @@
         <span>Users</span>
     </div>
     <?php
-        $nome = "HHHHHHHHT";
-        for($i = 0; $i < 5; $i++):
+        
+        $query = "SELECT * FROM user";
+        $result = mysqli_query($conexao, $query);
+        $row = mysqli_num_rows($result);
+        for($i = 0; $i < $row; $i++):
+        $dado = mysqli_fetch_array($result);
+        $nome = $dado["user"];
     ?>
         <div class="intern">
             <div class="user">
                 <div class="userimg">
                     <div class="img">
-                        <img src="./public/img/user.png" alt="">
+                        <img src="/public/img/user.png" alt="">
                     </div>
                 </div>
                 <div class="span">

@@ -1,14 +1,20 @@
 <header>
     <div class="header">
+        <?php
+        if(isset($_SESSION["id"])):
+            $id = $_SESSION["id"];
+            $user = $_SESSION["user"];
+            $img = $_SESSION["img"];
+        ?>
         <div class="account">
             <div class="img">
                 <div class="imgbc">
                     <div class="foto">
-                        <img src="./public/img/user.png" alt="">
+                        <img src="/public/img/<?php echo $img?>" alt="">
                     </div>
                 </div>
                <div class="nick">
-                    <span>HHHHHHHHT</span>
+                    <span><?php echo $user ?></span>
                     <div class="copied">
                         <span>Copiado</span>
                     </div>
@@ -25,8 +31,26 @@
                 </div>
             </div>
         </div>
+        <?php
+            endif;
+        ?>
+        
+        <?php
+        if(!isset($_SESSION["id"])):
+        
+        ?>
+        <div class="account-login">
+            <div class="intern-div">
+                <a href="/Account/index.php"><span>Logar</span></a>
+            </div>
+        </div>
+        <?php
+            endif;
+        ?>
+
+
         <div class="nav">
-            <div class="pai">
+            <div class="pai home-page">
                 <div class="namedir">
                     <span class="click">
                         <div class="icons">

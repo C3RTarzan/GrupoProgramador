@@ -7,7 +7,7 @@
             <div class="home">
                 <div class="articles">
                 <?php
-                    
+                    include "home-sobre.php";
                 ?>
                 </div>
             </div>
@@ -17,8 +17,9 @@
                 </div>
             </div>
             <?php
-                include "devs.php"
+                include "../devs.php";
             ?>
         </div>   
     </div>
 </section>
+<script src="/public/js/home-sobre.js"></script>
