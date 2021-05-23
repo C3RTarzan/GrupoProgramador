@@ -6,17 +6,15 @@
     user-select: none;
     height: 100%;
     display: none;
-    position: absolute; 
-    background-color: $cor;
+    position: fixed; 
+    background-color: $cor1;
     z-index: 110;
     .itens{
         position: fixed;
         width: 300px;
         height: 100%;
-        background-color: $cor2;
-        
-        
-        
+        background-color: $cor2;    
+        overflow-y: auto;     
         .bcnav{
             width: 100%;
             height: min-content;
@@ -56,8 +54,8 @@
                     .account{
                         span{
                             color: $corspan;
-                            font-size: 18px;
-                            font-weight: lighter;
+                            font-size: 20px;
+
                         }
                         .exit{
                             color: rgba(255, 29, 29, 0.755);
@@ -67,8 +65,150 @@
             }
         }
     }
+    
     .info{
         position: relative;
+        height: 100%;
+        left: 300px;
+        width: calc(100% - 300px);
+        overflow-y: auto;
+        .sections{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .divdisplay{
+                width: 100%;
+                height: 100%;
+                padding: 100px 100px 50px 100px;
+                display: none;
+            }
+            .myAccount{
+                flex-direction: column;
+                height: auto;
+                .title-account{
+                    margin-bottom: 15px;
+                    margin-left: 15px;
+                    span{
+                        font-size: 22px;
+                        color: $corspan;
+                    }
+                }
+                .content-account{
+                    width: 100%;
+                    height: 450px;
+                    border-radius: 10px;
+                    background-color: $cor2;
+                    padding: 10px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    .img-bc{
+                        margin: 10px 0;
+                        width: 100%;
+                        height: 100px;
+                        display: flex;
+                        justify-content: center;
+                        .img{
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            background-color: aqua;
+                            img{
+
+                            }
+                        }
+                    }
+                    .itens-account{
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 280px;
+                        padding: 30px;
+                        background-color: $cor1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        div{
+                            width: 100%;
+                            height: 80px;
+                        }
+                        .pai-account{
+                            display: flex;
+                            .info-username{
+                                display: flex;
+                                justify-content: center;
+                                flex-direction: column;
+                                width: 50%;
+                                .title-username{
+                                    color: $corspan;
+                                    opacity: .6;
+                                    margin-bottom: 5PX;
+                                }
+                                .username{
+                                    color: $corspan;
+                                    cursor: pointer;
+                                }
+                            }
+                            .edit-username{
+                                width: 50%;
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                height: 100%;
+                                .edit{
+                                    position: relative;
+                                    left: calc(100% - 80px);
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 5px;
+                                    background-color: $corbutton;
+                                    width: 80px;
+                                    cursor: pointer;
+                                    height: 40px;
+                                    span{
+                                        color: $corspan;
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                        .email-account{
+                            background-color: azure;
+                        }
+                        .pass-account{
+                            background-color: brown;
+                        }
+                    }
+                }
+                .end-account{
+                    width: 100%;
+                    height: 45px;
+                    margin-top: 50px;
+                    display: flex;
+                    justify-content: center;
+                    .button-end{
+                        background-color: #ed4245;
+                        cursor: pointer;
+                        width: 150px;
+                        height: 100%;
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        span{
+                            color: $corspan;
+                            font-weight: bolder;
+                        }
+                    }   
+                }
+            }
+            .privacy{
+                
+            }
+            .safety{
+
+            }
+        }
         .ExitOptions{
             position: absolute;
             display: flex;

@@ -56,7 +56,7 @@
                         <div class="icons">
                             <span class="iconify" data-icon="eva:arrow-ios-forward-fill" data-inline="false"></span>
                         </div>    
-                         Home
+                        Web
                     </span>
                 </div>
                 <div class="itens">

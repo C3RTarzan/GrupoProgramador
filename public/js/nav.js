@@ -6,19 +6,14 @@ window.onload = () =>{
     menu()
     clicknav()
     optionsexit()
-    document.querySelector(".namedir").click();
 }
 function clicknav(){
     const home = document.querySelectorAll(".home-page .pai");
     const iconify = document.querySelectorAll(".home-page .pai .iconify")
     for(let i = 0; i < home.length; i++){
         home[i].addEventListener("click", () => {
-            if(home[i] == home[0]){
-                window.location.href = "/Home"
-            }
-            if(home[i] == home[1]){
-                window.location.href = "/Sobre"
-            }
+            if(home[i] == home[0]) window.location.href = "/Home";
+            if(home[i] == home[1]) window.location.href = "/Sobre";
         })
     }
 }
@@ -29,13 +24,9 @@ function menu(){
     const articles = document.querySelector(".articles");
     const span = openedmenu.querySelector(".span");
     let cont = true;
-    
-    openedmenu.addEventListener("click", () =>{  
-        if(localStorage.getItem("menu")){
-            devs.style.display
-            console.log();
-        }
-        if (cont) {
+    if(sessionStorage.getItem("menu")){
+        cont = sessionStorage.getItem("menu");
+        if(cont === "true"){
             devs.style = "display: none";
             articles.style = "width: 100%";
             openedmenu.style = "right: 1px";
@@ -46,23 +37,50 @@ function menu(){
             articles.style = "width: calc(100% - 200px);";
             openedmenu.style = "right: 200px";
             span.style = "transform: rotateZ(180deg);"
-            cont = true;
+            cont = true;    
         }
-        localStorage.setItem("menu", devs.style.display);
+    }
+    openedmenu.addEventListener("click", () =>{  
+        if (cont) {
+            devs.style = "display: none";
+            articles.style = "width: 100%";
+            openedmenu.style = "right: 1px";
+            span.style = "transform: rotateZ(0);"
+            sessionStorage.setItem("menu", true);
+            cont = false;
+            
+        }else{
+            devs.style = "display: inline";
+            articles.style = "width: calc(100% - 200px);";
+            openedmenu.style = "right: 200px";
+            span.style = "transform: rotateZ(180deg);"
+            sessionStorage.setItem("menu", false);
+            cont = true;     
+        }
     })
 }
 
 function options(){
-    const click = document.querySelector("header .gear");
+    const click = document.querySelector("header .gear .iconify");
     if(click != null){
-        
         const display = document.querySelector(".secoptions");
         const exit = document.querySelector(".ExitOptions");
+        const section = document.querySelector("section");
+        let cont = sessionStorage.getItem("options");
+        if(cont == "true"){
+            display.style = "display: inline";
+            section.style = "overflow-y: none;"
+        }else{
+            display.style = "display: none";
+            section.style = "overflow-y: auto;"
+        }  
         click.addEventListener("click", () =>{
             display.style = "display: inline";
+            sessionStorage.setItem("options", "true");
         })
         exit.addEventListener("click", () =>{
             display.style = "display: none";
+            sessionStorage.setItem("options", "false");
     
         })  
         document.querySelector('body').addEventListener('keydown', function(event) {
@@ -70,8 +88,10 @@ function options(){
         if(tecla == 27){
             if(display.style.display == "none" || display.style.display == ""){
                 display.style = "display: inline";
+                sessionStorage.setItem("options", true);
             }else if(display.style.display == "inline"){
                 display.style = "display: none";
+                sessionStorage.setItem("options", false);
             }
         }   
         })
@@ -81,7 +101,7 @@ function optionsexit(){
     const exit = document.querySelector(".secoptions .exitAccount");
     if(exit != null ){
         exit.addEventListener("click", () =>{
-            console.log("clicou");
+            sessionStorage.setItem("options", "false")
             window.location.href = "/class/exit.php"
         })
     }

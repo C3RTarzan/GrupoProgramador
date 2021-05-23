@@ -4,8 +4,8 @@
   user-select: none;
   height: 100%;
   display: none;
-  position: absolute;
-  background-color: #36393f;
+  position: fixed;
+  background-color: #2f3136;
   z-index: 110;
 }
 .secoptions .itens {
@@ -13,6 +13,7 @@
   width: 300px;
   height: 100%;
   background-color: #292b2f;
+  overflow-y: auto;
 }
 .secoptions .itens .bcnav {
   width: 100%;
@@ -54,14 +55,145 @@
 }
 .secoptions .itens .bcnav .nav .button .account span {
   color: #d6d7d9;
-  font-size: 18px;
-  font-weight: lighter;
+  font-size: 20px;
 }
 .secoptions .itens .bcnav .nav .button .account .exit {
   color: rgba(255, 29, 29, 0.755);
 }
 .secoptions .info {
   position: relative;
+  height: 100%;
+  left: 300px;
+  width: calc(100% - 300px);
+  overflow-y: auto;
+}
+.secoptions .info .sections {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.secoptions .info .sections .divdisplay {
+  width: 100%;
+  height: 100%;
+  padding: 100px 100px 50px 100px;
+  display: none;
+}
+.secoptions .info .sections .myAccount {
+  flex-direction: column;
+  height: auto;
+}
+.secoptions .info .sections .myAccount .title-account {
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+.secoptions .info .sections .myAccount .title-account span {
+  font-size: 22px;
+  color: #d6d7d9;
+}
+.secoptions .info .sections .myAccount .content-account {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  background-color: #292b2f;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.secoptions .info .sections .myAccount .content-account .img-bc {
+  margin: 10px 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.secoptions .info .sections .myAccount .content-account .img-bc .img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account {
+  border-radius: 10px;
+  width: 100%;
+  height: 280px;
+  padding: 30px;
+  background-color: #2f3136;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account div {
+  width: 100%;
+  height: 80px;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account .pai-account {
+  display: flex;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account .pai-account .info-username {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account .pai-account .info-username .title-username {
+  color: #d6d7d9;
+  opacity: 0.6;
+  margin-bottom: 5PX;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account .pai-account .info-username .username {
+  color: #d6d7d9;
+  cursor: pointer;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account .pai-account .edit-username {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account .pai-account .edit-username .edit {
+  position: relative;
+  left: calc(100% - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #5865f2;
+  width: 80px;
+  cursor: pointer;
+  height: 40px;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account .pai-account .edit-username .edit span {
+  color: #d6d7d9;
+  font-size: 18px;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account .email-account {
+  background-color: azure;
+}
+.secoptions .info .sections .myAccount .content-account .itens-account .pass-account {
+  background-color: brown;
+}
+.secoptions .info .sections .myAccount .end-account {
+  width: 100%;
+  height: 45px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.secoptions .info .sections .myAccount .end-account .button-end {
+  background-color: #ed4245;
+  cursor: pointer;
+  width: 150px;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secoptions .info .sections .myAccount .end-account .button-end span {
+  color: #d6d7d9;
+  font-weight: bolder;
 }
 .secoptions .info .ExitOptions {
   position: absolute;

@@ -1,3 +1,4 @@
+
 <form action="logar.php" method="post">
     <input type="text" name="user" placeholder="User">
     <input type="password" name="pass" placeholder="Senha">
